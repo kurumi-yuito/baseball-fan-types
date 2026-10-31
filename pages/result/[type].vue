@@ -12,7 +12,14 @@ const shareUrl = computed(() => import.meta.client ? window.location.href : '')
 const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText.value)}&url=${encodeURIComponent(shareUrl.value)}`)
 const copied = ref(false)
 async function copy() { if (!import.meta.client) return; try { await navigator.clipboard.writeText(shareUrl.value); copied.value = true } catch { copied.value = false } }
-useSeoMeta({title:()=> info.value ? `${info.value.name} | 野球民タイプ診断` : 'タイプが見つかりません',description:()=>info.value?.description || '野球民タイプ診断',ogTitle:()=>info.value ? `${info.value.name} | 野球民タイプ診断` : '野球民タイプ診断',ogDescription:()=>info.value?.tagline || '野球観戦スタイル診断'})
+useSeoMeta({
+  title: () => info.value ? `${info.value.name} | 野球民タイプ診断` : 'タイプが見つかりません',
+  description: () => info.value?.description || '野球民タイプ診断',
+  ogTitle: () => info.value ? `${info.value.name} | 野球民タイプ診断` : '野球民タイプ診断',
+  ogDescription: () => info.value?.tagline || '野球観戦スタイル診断',
+  twitterTitle: () => info.value ? `${info.value.name} | 野球民タイプ診断` : '野球民タイプ診断',
+  twitterDescription: () => info.value?.tagline || '野球観戦スタイル診断'
+})
 </script>
 <template>
 <div class="site"><header class="header"><NuxtLink to="/" class="brand">野球民タイプ診断</NuxtLink><NuxtLink to="/quiz" class="header-link">もう一度診断</NuxtLink></header>

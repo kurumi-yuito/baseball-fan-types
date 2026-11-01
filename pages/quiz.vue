@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { questions } from '~/data/quiz'
+import { questions, type Question } from '~/data/quiz'
 import { calculate, encodeAnswers, type Answers } from '~/utils/scoring'
 const router = useRouter()
 const page = ref(0)
@@ -12,7 +12,7 @@ const visible = computed(() => orderedQuestions.slice(page.value * pageSize, (pa
 const pages = Math.ceil(orderedQuestions.length / pageSize)
 const answered = computed(() => questions.filter(q => answers[q.id] !== undefined).length)
 const progress = computed(() => Math.round(answered.value / questions.length * 100))
-const canNext = computed(() => visible.value.every(q => answers[q.id] !== undefined))
+const canNext = computed(() => visible.value.every((q: Question) => answers[q.id] !== undefined))
 const error = ref('')
 const scale = [6,5,4,3,2,1]
 const labels: Record<number,string> = {6:'強く同意する',5:'同意する',4:'やや同意する',3:'やや同意しない',2:'同意しない',1:'まったく同意しない'}

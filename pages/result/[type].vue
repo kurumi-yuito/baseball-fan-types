@@ -178,9 +178,6 @@ useSeoMeta({
             </div>
           </div>
 
-          <p class="note">
-            タイプは設問ごとの賛否の多数決で判定しています。割合は回答の強さを集計した参考値で、確率ではありません。多数決と割合の優勢側が異なる場合があります。
-          </p>
         </section>
 
         <section v-if="result" class="result-section">

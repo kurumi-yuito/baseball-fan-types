@@ -33,3 +33,9 @@ npm run dev
 - 日本語フォントのウェイトを整理し、過度な字間・太字・立体的なボタン装飾を削減。
 # baseball-fan-types
 # baseball-fan-types
+
+## フッター・お問い合わせ
+
+- 共通フッターは `components/SiteFooter.vue`、お問い合わせは `/contact`。
+- EmailJS は npb-diary と同じサービス・テンプレートを使用し、`service: baseball-fan-types` で送信元を識別します。
+- 必要に応じて `NUXT_PUBLIC_EMAILJS_PUBLIC_KEY`、`NUXT_PUBLIC_EMAILJS_SERVICE_ID`、`NUXT_PUBLIC_EMAILJS_TEMPLATE_ID` で設定を上書きできます。

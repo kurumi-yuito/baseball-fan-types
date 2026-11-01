@@ -31,5 +31,5 @@ useSeoMeta({
     <section class="result-section"><p class="section-kicker">COMPATIBILITY</p><h2>ほかの野球民との相性</h2><div class="compat"><NuxtLink :to="`/result/${info.good}`"><small>{{ isOwnResult ? '気が合いそう' : '相性がよさそうなタイプ' }}</small><strong>{{types[info.good].name}}</strong><span>{{info.good}} →</span></NuxtLink><NuxtLink :to="`/result/${info.clash}`"><small>{{ isOwnResult ? '観戦スタイルが異なりそう' : '観戦スタイルが異なるタイプ' }}</small><strong>{{types[info.clash].name}}</strong><span>{{info.clash}} →</span></NuxtLink></div><p class="note">相性はキャラクター設定に基づくエンタメ上の表現です。</p></section>
     <div class="result-actions"><button v-if="result" class="outline-button" @click="copy">{{copied?'URLをコピーしました':'結果URLをコピー'}}</button><NuxtLink class="outline-button" to="/quiz">もう一度診断する</NuxtLink></div>
   </div>
-</main><main v-else class="not-found"><h1>タイプが見つかりません</h1><NuxtLink class="start-button" to="/quiz">診断する →</NuxtLink></main><footer class="footer">野球民タイプ診断はエンタメ診断です。</footer></div>
+</main><main v-else class="not-found"><h1>タイプが見つかりません</h1><NuxtLink class="start-button" to="/quiz">診断する →</NuxtLink></main></div>
 </template>

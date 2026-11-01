@@ -15,6 +15,6 @@ useSeoMeta({ title: '野球民タイプ診断 | あなたの観戦スタイル�
       </section>
       <section class="stats" aria-label="診断について"><div><strong>23</strong><span>の質問</span></div><div><strong>16</strong><span>の基本タイプ</span></div><div><strong>6</strong><span>段階で回答</span></div></section>
     </main>
-    <footer class="footer">野球民タイプ診断は、野球観戦をテーマにしたエンタメ診断です。</footer>
+
   </div>
 </template>

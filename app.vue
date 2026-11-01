@@ -4,4 +4,4 @@ useSeoMeta({
   ogUrl: () => `https://baseball-fan-types.dom9th-works.com${route.fullPath.split('#')[0]}`
 })
 </script>
-<template><NuxtPage /></template>
+<template><div class="app-shell"><NuxtPage /><SiteFooter /></div></template>

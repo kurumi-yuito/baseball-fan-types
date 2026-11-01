@@ -1,6 +1,14 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-02-01',
 
+  runtimeConfig: {
+    public: {
+      emailjsPublicKey: '1XKYwuVEAjc2GvDhQ',
+      emailjsServiceId: 'service_jdmtit4',
+      emailjsTemplateId: 'template_afetvjq'
+    }
+  },
+
   css: ['~/assets/css/site.css'],
 
   app: {

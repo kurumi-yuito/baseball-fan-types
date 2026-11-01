@@ -37,7 +37,7 @@ useSeoMeta({ title: '無料診断 | 野球民タイプ診断' })
       <h2>{{ q.text }}</h2>
       <div class="scale-row"><span class="agree-label">同意する</span>
         <div class="scale-options" role="radiogroup" :aria-label="q.text">
-          <button v-for="n in scale" :key="n" type="button" role="radio" :aria-checked="answers[q.id] === n" :aria-label="labels[n]" :title="labels[n]" class="scale-button" :class="[n >= 4 ? 'agree' : 'disagree', 'size-'+Math.min(n,7-n), { selected: answers[q.id] === n }]" @click="choose(q.id,n)"><span v-if="answers[q.id] === n" aria-hidden="true">✓</span></button>
+          <button v-for="n in scale" :key="n" type="button" role="radio" :aria-checked="answers[q.id] === n" :aria-label="labels[n]" :title="labels[n]" class="scale-button" :class="[n >= 4 ? 'agree' : 'disagree', 'size-'+(4-Math.min(n,7-n)), { selected: answers[q.id] === n }]" @click="choose(q.id,n)"><span v-if="answers[q.id] === n" aria-hidden="true">✓</span></button>
         </div><span class="disagree-label">同意しない</span>
       </div>
     </div>

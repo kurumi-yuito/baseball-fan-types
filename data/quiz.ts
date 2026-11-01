@@ -18,7 +18,7 @@ export const axes: {
 }[] = [
   { id: 'S/G', left: 'S', right: 'G', leftLabel: 'ソロ', rightLabel: 'グループ' },
   { id: 'M/E', left: 'M', right: 'E', leftLabel: 'マイペース', rightLabel: '熱烈応援' },
-  { id: 'R/T', left: 'R', right: 'T', leftLabel: 'リスペクト', rightLabel: 'プロレス許容' },
+  { id: 'R/T', left: 'R', right: 'T', leftLabel: 'リスペクト重視', rightLabel: '伝統受容' },
   { id: 'A/P', left: 'A', right: 'P', leftLabel: '球場まるごと', rightLabel: '試合中心' },
   { id: 'C/F', left: 'C', right: 'F', leftLabel: '文脈重視', rightLabel: '自由柔軟' }
 ]
